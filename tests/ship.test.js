@@ -1,4 +1,4 @@
-import Ship from "./ship.js";
+import Ship from "../assets/ship.js";
 
 test('Test ship length initialization',() =>{
     let x = new Ship(3,'destroyer')
