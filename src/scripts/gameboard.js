@@ -12,7 +12,7 @@ class Gameboard{
             } 
         } else if(orientation == "h"){
             for (let i = 0;i<ship.length;i++){
-                this.board[coordinate[0]][coordinate[1]+1]=ship
+                this.board[coordinate[0]][coordinate[1]+i]=ship
             } 
         }
     }
@@ -20,9 +20,14 @@ class Gameboard{
     receiveAttack(coordinate){
         if(this.board[coordinate[0]][coordinate[1]]==""){
             this.board[coordinate[0]][coordinate[1]]="x"
+            console.log("Miss at ["+coordinate[0]+","+coordinate[1]+"]")
+            return
         }
         if(typeof (this.board[coordinate[0]][coordinate[1]]) == 'object'){
+            console.log("Hit at ["+coordinate[0]+","+coordinate[1]+"]!")
             this.board[coordinate[0]][coordinate[1]].hit()
+            this.allSunk()
+            return
         }
     }
 
@@ -32,6 +37,7 @@ class Gameboard{
                 return false
             }
         }
+        console.log("All ships sunk!")
         return true
     }
 }

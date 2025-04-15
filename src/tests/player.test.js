@@ -1,4 +1,4 @@
-import Player from "../../assets/player.js"
+import Player from "../../scripts/player.js"
 
 test('Test player initializes gameboard',() =>{
     let y = new Player("c")

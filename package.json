@@ -15,6 +15,7 @@
   "scripts": {
     "test": "jest",
     "watch": "jest --watch *.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve"
   }
 }

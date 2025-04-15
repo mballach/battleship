@@ -14,8 +14,14 @@ class Ship{
     validateSunk(){
         if(this.hits>=this.length){
             this.isSunk=true;
+            console.log("Ship is sunk!")
+            return true;
+        } else{
+            return false;
         }
     }
+
+
 }
 
 export default Ship

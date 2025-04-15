@@ -1,5 +1,5 @@
-import Ship from "../../assets/ship.js"
-import Gameboard from "../../assets/gameboard.js"
+import Ship from "../../scripts/ship.js"
+import Gameboard from "../../scripts/gameboard.js"
 
 test('Test default gameboard',() =>{
     let x = new Gameboard()
