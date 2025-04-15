@@ -1,3 +1,7 @@
+import logToDOM from "./logToDOM";
+
+const log = document.getElementById('log')
+
 class Ship{
     constructor(length, name){
         this.length = length;
@@ -14,7 +18,7 @@ class Ship{
     validateSunk(){
         if(this.hits>=this.length){
             this.isSunk=true;
-            console.log("Ship is sunk!")
+            logToDOM(log,"Ship is sunk!")
             return true;
         } else{
             return false;

@@ -19,6 +19,7 @@ h1{
 
 .board-area{
     padding-top:20px;
+    padding-bottom:60px;
     width:100%;
     display:flex;
     justify-content: space-evenly;
@@ -50,4 +51,18 @@ h1{
 
 .unclicked:hover{
     background-color: rgb(178, 213, 226);
+}
+
+.clicked-hit{
+    background-color: rgb(0, 85, 0);
+}
+
+.clicked-miss{
+    background-color: darkred;
+}
+
+.log{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
 }

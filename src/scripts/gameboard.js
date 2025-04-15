@@ -1,3 +1,7 @@
+import logToDOM from "./logToDOM"
+
+const log = document.getElementById('log')
+
 class Gameboard{
     constructor(){
         this.ships=[]
@@ -20,11 +24,11 @@ class Gameboard{
     receiveAttack(coordinate){
         if(this.board[coordinate[0]][coordinate[1]]==""){
             this.board[coordinate[0]][coordinate[1]]="x"
-            console.log("Miss at ["+coordinate[0]+","+coordinate[1]+"]")
+            logToDOM(log,"Miss at ["+coordinate[0]+","+coordinate[1]+"]")
             return
         }
         if(typeof (this.board[coordinate[0]][coordinate[1]]) == 'object'){
-            console.log("Hit at ["+coordinate[0]+","+coordinate[1]+"]!")
+            logToDOM(log,"Hit at ["+coordinate[0]+","+coordinate[1]+"]!")
             this.board[coordinate[0]][coordinate[1]].hit()
             this.allSunk()
             return
@@ -37,7 +41,7 @@ class Gameboard{
                 return false
             }
         }
-        console.log("All ships sunk!")
+        logToDOM(log,"All ships sunk!")
         return true
     }
 }

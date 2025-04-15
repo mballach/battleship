@@ -1,3 +1,5 @@
+import logToDOM
+ from "./logToDOM";
 function onClick(event, player){
     let x = event.target.id;
     let xcoordinate = x.substring(1,2)
@@ -7,9 +9,6 @@ function onClick(event, player){
        document.getElementById(event.target.id).innerHTML="O"
     } else {
        document.getElementById(event.target.id).innerHTML="X"
-       if(player.gameboard.board[xcoordinate][ycoordinate].validateSunk==true){
-         console.log("Ship sunk!")
-       }
     }
 }
 
