@@ -49,6 +49,20 @@ h1{
     background-color: rgb(26, 171, 224);
 }
 
+.own{
+    background-color: rgb(26, 171, 224);
+    color:green;
+}
+
+.own-pregame{
+    background-color: rgb(26, 171, 224);
+    color:green;
+}
+.own-pregame:hover{
+    background-color: rgb(24, 70, 86);
+    color:green;
+}
+
 .unclicked:hover{
     background-color: rgb(178, 213, 226);
 }
@@ -59,6 +73,11 @@ h1{
 
 .clicked-miss{
     background-color: darkred;
+}
+
+.own-ship{
+    background-color: silver;
+    color:darkred;
 }
 
 .log{

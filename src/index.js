@@ -6,10 +6,9 @@ import renderBoards from "./scripts/renderBoards";
 const board1 = document.getElementById('board1')
 const board2 = document.getElementById('board2')
 
-const player1 = new Player()
-player1.gameboard.place(new Ship(5),[0,0],"h")
-const player2 = new Player()
-player2.gameboard.place(new Ship(3),[0,0],"v")
+const player1 = new Player("a")
+const player2 = new Player("b")
+player2.gameboard.placeCPUShips()
 
 
 renderBoards(board1, board2, player1,player2)
