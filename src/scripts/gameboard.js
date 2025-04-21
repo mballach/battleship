@@ -58,15 +58,15 @@ class Gameboard{
         if(this.board[coordinate[0]][coordinate[1]]==""){
             this.shotboard[coordinate[0]][coordinate[1]]="x"
             /*this.board[coordinate[0]][coordinate[1]]="x"*/
-            /*document.getElementById(this.name+coordinate[0]+coordinate[1]).innerHTML="O"*/
+            document.getElementById(this.name+coordinate[0]+coordinate[1]).innerHTML="O"
             this.received=this.received+1
             return
         }
         if(typeof (this.board[coordinate[0]][coordinate[1]]) == 'object'){
             this.shotboard[coordinate[0]][coordinate[1]]="x"
-            this.board[coordinate[0]][coordinate[1]].hit()
-            /*document.getElementById(this.name+coordinate[0]+coordinate[1]).innerHTML="X"*/
             
+            document.getElementById(this.name+coordinate[0]+coordinate[1]).innerHTML="X"
+            this.board[coordinate[0]][coordinate[1]].hit()
             this.allSunk()
             this.received=this.received+1
             return
@@ -100,6 +100,7 @@ class Gameboard{
         } else {
             this.orientation="h"
         }
+        console.log("Now placing "+this.orientation)
     }
 
     placeCPUShips(){

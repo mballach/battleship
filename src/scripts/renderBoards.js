@@ -36,6 +36,11 @@ function renderBoards(b1,b2,p1,p2){
                         {placeUserShips(e,p1)
                         renderBoards(b1,b2,p1,p2)}
                         ,{once:true})
+                    if(p1.gameboard.orientation=="v"){
+                        newCell.innerText="↓"
+                    } else {
+                        newCell.innerText="→"
+                    }
                 } else{
                     newCell.setAttribute('class','cell own-ship')
                 }
